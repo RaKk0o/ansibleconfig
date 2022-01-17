@@ -1,0 +1,12 @@
+---
+
+- hosts:
+    - linux_server
+    - windows_server
+
+  roles:
+    - m4rcu5nl.zerotier-one
+
+
+
+
