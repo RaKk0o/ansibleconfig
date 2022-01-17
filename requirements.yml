@@ -2,4 +2,4 @@
 
 roles :
   - name: m4rcu5nl.zerotier-one
-    version: 1.2.3
+    version: v1.2.3
