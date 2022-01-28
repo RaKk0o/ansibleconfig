@@ -1,0 +1,26 @@
+---
+- name: Create directory
+  ansible.builtin.file:
+    path: /srv/zero-ui
+    state: directory
+    group: docker
+    mode: '0770'
+  become: yes
+
+- name: Call the docker-compose.yml file
+  copy:
+    src: docker-compose.yml
+    dest: /srv/zero-ui/docker-compose.yml
+    group: docker
+    mode: '0640'
+
+- name: Run the containers
+  community.docker.docker_compose:
+    project_src: /srv/zero-ui
+  register: output
+
+- name: Debug
+  ansible.builtin.debug:
+    var: output
+
+    #- name: Disable your firewall

@@ -1,0 +1,21 @@
+---
+
+- name: Install docker
+  ansible.builtin.package:
+    name: docker.io
+    state: present
+
+- name: Install docker compose
+  ansible.builtin.package:
+    name: docker-compose
+    state: present
+
+- name: Enable docker 
+  ansible.builtin.systemd:
+    name: docker
+    enabled: yes
+
+- name: Run docker
+  ansible.builtin.systemd:
+    state: started
+    name: docker
