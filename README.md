@@ -2,10 +2,11 @@
 
 # Install
 
-
+To use an existing role on https://galaxy.ansible.com/, you have to modify the `requirements.yml` file with the role name and the desired version. Once this modification is done, you will have to enter the following command to install the role:
 ```
 $ ansible-galaxy install -r requirements.yml
 ```
+
 Run `ansible-playbooks file.yml`, execute the defined tasks on the targeted hosts.
 
 Check mode (`--check`) is just a simulation. It will not generate output for tasks. When you run in diff (`--diff`) mode, any module that supports diff mode reports the changes made or, if used with --check, the changes that would have been made.

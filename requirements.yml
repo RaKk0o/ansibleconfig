@@ -3,3 +3,7 @@
 roles :
   - name: m4rcu5nl.zerotier-one
     version: v1.2.3
+
+roles:
+  - name: xanmanning.k3s
+    version: v3.1.0
