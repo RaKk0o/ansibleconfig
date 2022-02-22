@@ -1,8 +1,7 @@
 # Ansible config
 
 # Install
-
-To use an existing role on https://galaxy.ansible.com/, you have to modify the `requirements.yml` file with the role name and the desired version. Once this modification is done, you will have to enter the following command to install the role:
+First, you have to clone this repo. Then, you will have to enter the following command because you need to install some roles specifies in the file `requierements.yml`:
 ```
 $ ansible-galaxy install -r requirements.yml
 ```
@@ -35,7 +34,7 @@ Install : https://github.com/dec0dOS/zero-ui
 Once the deployment of kubernetes is done with Ansible, you will have to run the following command on your local machine. This will allow you to access the cluster directly from your machine without having to go through the server.
 
 ```
-$ ssh ubuntu@141.94.106.69 "mkdir -p ~/.kube && sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config && sudo chown ubuntu:ubuntu ~/.kube/config" && mkdir -p ~/.kube && scp ubuntu@141.94.106.69:~/.kube/config ~/.kube/config
+$ ssh ubuntu@152.228.211.254 "mkdir -p ~/.kube && sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config && sudo chown ubuntu:ubuntu ~/.kube/config" && mkdir -p ~/.kube && scp ubuntu@152.228.211.254:~/.kube/config ~/.kube/config
 ```
 To use the kubernetes command line tool, kubectl, which allows you to run commands in Kubernetes clusters. You will have to install it with the following command:
 
