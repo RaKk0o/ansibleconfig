@@ -15,7 +15,7 @@
     mode: '0640'
 
 - name: Run the containers
-  docker_compose:
+  docker.compose.docker_compose:
     project_src: /srv/zero-ui
   register: output
 

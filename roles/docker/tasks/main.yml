@@ -10,6 +10,11 @@
     name: docker.compose
     state: present
 
+- name: Install docker general
+  ansible.builtin.package:
+    name: docker.general
+    state: present
+
 - name: Enable docker
   ansible.builtin.systemd:
     name: docker
