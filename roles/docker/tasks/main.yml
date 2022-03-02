@@ -7,10 +7,10 @@
 
 - name: Install docker compose
   ansible.builtin.package:
-    name: docker-compose
+    name: docker.compose
     state: present
 
-- name: Enable docker 
+- name: Enable docker
   ansible.builtin.systemd:
     name: docker
     enabled: yes

@@ -3,8 +3,8 @@
 - hosts:
   - linux_server
   - windows_server
-  vars:
-    zerotier_network_id: 14b391f78dc89249 
+   #vars:
+     #zerotier_network_id:
   roles:
     - m4rcu5nl.zerotier-one
 - hosts:
@@ -12,4 +12,4 @@
   roles:
     - docker
     - zerotier-controller
-    - xanmanning.k3s 
+    - xanmanning.k3s
